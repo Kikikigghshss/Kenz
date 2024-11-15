@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karya Saya - Kenzo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #333, #666);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 1rem 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background: #555;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 2rem 0;
+        }
+        section {
+            background: #fff;
+            padding: 2rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+        }
+        .work-item {
+            background: #f9f9f9;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .work-item h3 {
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem;
+        }
+        .work-item iframe {
+            width: 100%;
+            height: 350px;
+            border: none;
+            border-radius: 8px;
+        }
+        .work-item p {
+            margin: 1rem 0 0;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            margin: 0;
+        }
+
+        /* Media Queries untuk layar kecil */
+        @media only screen and (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            nav ul li a {
+                font-size: 1rem;
+                padding: 0.5rem;
+            }
+            section {
+                padding: 1rem;
+            }
+            .work-item iframe {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kenzo's Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Tentang Saya</a></li>
+                    <li><a href="work.html">Karya Saya</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section>
+            <h2>Karya Saya</h2>
+            <div class="work-item">
+                <h3>Konfigurasi jaringan di cisco</h3>
+                <iframe src="Cisco.pdf" title="Cisco"></iframe>
+                <p>Membuat topologi jaringan di Cisco Packet Tracer.</p>
+            </div>
+            <div class="work-item">
+                <h3>Judul Proyek 2</h3>
+                <iframe src="project2.pdf" title="Proyek 2"></iframe>
+                <p>Deskripsi tentang Proyek 2.</p>
+            </div>
+            <div class="work-item">
+                <h3>Judul Proyek 3</h3>
+                <iframe src="project3.pdf" title="Proyek 3"></iframe>
+                <p>Deskripsi tentang Proyek 3.</p>
+            </div>
+            <div class="work-item">
+                <h3>Judul Proyek 4</h3>
+                <iframe src="project4.pdf" title="Proyek 4"></iframe>
+                <p>Deskripsi tentang Proyek 4.</p>
+            </div>
+            <div class="work-item">
+                <h3>Judul Proyek 5</h3>
+                <iframe src="project5.pdf" title="Proyek 5"></iframe>
+                <p>Deskripsi tentang Proyek 5.</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Kenzo. Semua Hak Dilindungi.</p>
+    </footer>
+</body>
+</html>
 
