@@ -1,81 +1,224 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <title>School documentation</title>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karya Saya - Kenzo</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Nama Anda - Page 2</title>
+    <link rel="stylesheet" href="assets/style.css">
     <style>
-        /* Media Queries untuk layar kecil */
-        @media only screen and (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
+        /* Animasi fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
             }
-            nav ul {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animasi slide-up */
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Navigation styling */
+        .navigation {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            background-color: #ffcccb;
+            padding: 15px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #000000;
+            padding: 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navigation a:hover {
+            color: #000000;
+            transform: scale(1.1);
+        }
+
+        /* Medium screens */
+        @media all and (max-width: 800px) {
+            .navigation {
+                justify-content: space-around;
+            }
+        }
+
+        /* Small screens */
+        @media all and (max-width: 500px) {
+            .navigation {
                 flex-direction: column;
-                gap: 0.5rem;
+                align-items: center;
             }
-            nav ul li a {
-                font-size: 1rem;
-                padding: 0.5rem;
-            }
-            section {
-                padding: 1rem;
-            }
-            .work-item iframe {
-                height: 200px;
-                width: 200px;
-            }
+        }
+
+        /* Reset margin and padding */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background color and text color */
+        body {
+            background: linear-gradient(to right, #ffe4e1, #ffe4e1);
+            background-color: #ffe4e1;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #ffb6c1; /* Opacity 40% */
+            border-radius: 7px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            color: black;
+        }
+
+        .menu {
+            display: none; /* Hide menu by default */
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: #ffb6c1; /* Opacity 40% */
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .menu a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Show the menu when 'show' class is added */
+        .menu.show {
+            display: block;
+        }
+
+        /* Section styling */
+        section {
+            border: 2px solid #ffffff; /* Bingkai putih di sekitar section */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan lembut di sekitar section */
+            max-width: 800px; /* Batasi lebar kontainer */
+            margin: 20px auto; /* Pusatkan kontainer dan beri margin atas-bawah */
+            padding: 20px;
+            background: rgba(255, 182, 193, 0.8); /* Latarnya transparan */
+            border-radius: 8px; /* Sudut membulat */
+            animation: fadeIn 1.5s ease-out, slideUp 1s ease-out; /* Animasi saat muncul */
+        }
+
+        p {
+            max-height: 150px; /* Batasi tinggi teks */
+            overflow-y: auto; /* Tambahkan scrollbar vertikal jika diperlukan */
+            text-align: justify; /* Rata kiri-kanan */
+        }
+
+        a {
+            color: lightblue; /* Warna tautan */
+            text-decoration: none; /* Hapus garis bawah pada tautan */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Garis bawah saat tautan dihover */
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Kenzo's Portfolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">Tentang Saya</a></li>
-                    <li><a href="work.html">Karya Saya</a></li>
-                </ul>
-            </nav>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="index.html">Home</a> <!-- Link back to index.html -->
+        <a href="portofolio.html">Portofolio</a>
+        <a href="PPT.html">PPT</a>
+        <a href="games.html">Games section</a>
+    </nav>
+
+    <!-- Titik Tiga Navigasi -->
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+        <div class="menu" id="menu">
+            <a href="#Remote">Konfigurasi Remote Server</a>
+            <a href="#FTP">Konfigurasi FTP Server</a>
+            <a href="#DHCP">Konfigurasi DHCP Server</a>
+            <a href="#repo">Repository</a>
+            <a href="#deb">Instalasi Debian</a>
+            <a href="#AP">Instalasi AP</a>
+            <a href="#Cisco">Cisco Packet Tracer</a>
+            <a href="#user">Toturial buat user</a>
         </div>
-    </header>
-    
-    <div class="container">
-        <section>
-            <h2>Karya Saya</h2>
-            <div class="work-item">
-                <h3>Konfigurasi jaringan di cisco</h3>
-                <iframe src="Cisco.pdf" title="Cisco"></iframe>
-                <p>Membuat topologi jaringan di Cisco Packet Tracer.</p>
-            </div>
-            <div class="work-item">
-                <h3>Judul Proyek 2</h3>
-                <iframe src="project2.pdf" title="Proyek 2"></iframe>
-                <p>Deskripsi tentang Proyek 2.</p>
-            </div>
-            <div class="work-item">
-                <h3>Judul Proyek 3</h3>
-                <iframe src="project3.pdf" title="Proyek 3"></iframe>
-                <p>Deskripsi tentang Proyek 3.</p>
-            </div>
-            <div class="work-item">
-                <h3>Judul Proyek 4</h3>
-                <iframe src="project4.pdf" title="Proyek 4"></iframe>
-                <p>Deskripsi tentang Proyek 4.</p>
-            </div>
-            <div class="work-item">
-                <h3>Judul Proyek 5</h3>
-                <iframe src="project5.pdf" title="Proyek 5"></iframe>
-                <p>Deskripsi tentang Proyek 5.</p>
-            </div>
-        </section>
-    </div>
-    
-    <footer>
-        <p>&copy; 2024 Kenzo. Semua Hak Dilindungi.</p>
-    </footer>
+    </div>    
+
+    <!-- Section PPT -->
+    <section id="Remote">
+        <h1>Konfigurasi Remote Server</h1>
+        <iframe src="Konfigurasi_Remote_Server_Update.pdf" width="100%" height="600px"></iframe>
+    </section>
+
+    <section id="FTP">
+        <h1>Konfigurasi FTP Server</h1>
+        <iframe src="KONFIGURASI_FTP_SERVER.pdf" width="100%" height="600px"></iframe>
+    </section>
+
+    <section id="DHCP">
+        <h1>Konfigurasi DHCP Server</h1>
+        <iframe src="KONFIGURASI DHCP SERVER PADA DEBIAN 11.pdf" width="100%" height="600px"></iframe>
+    </section>
+
+    <section id="deb">
+        <h1>Instalasi Debian</h1>
+        <iframe src="PRAKTIKUM INSTALL DEBIAN CLI.pdf" width="100%" height="600px"></iframe>
+    </section>
+
+    <section id="AP">
+        <h1>Instalasi AP</h1>
+        <iframe src="AP.pdf" width="100%" height="600px"></iframe>
+    </section>
+
+    <section id="Cisco">
+        <h1>Cisco Packet Tracer</h1>
+        <iframe src="cisco packet tracer update.pdf" width="100%" height="600px"></iframe>
+    </section>
+
+    <section id="user">
+        <h1>Membuat user di pc dan aktivan 2FA</h1>
+        <iframe src="toturialgogol.pdf" width="100%" height="600px"></iframe>
+    </section>
+
+    <section id="repo">
+        <h1>Repository</h1>
+        <iframe src="Repository.pdf" width="100%" height="600px"></iframe>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
